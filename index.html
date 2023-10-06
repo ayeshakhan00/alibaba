@@ -1,0 +1,2906 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Ali Baba</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        .Section1 {
+            height: max-content;
+            width: 100%;
+            /* border: 1px solid; */
+        }
+
+        .expo {
+            height: 8vh;
+            width: 100%;
+            /* border: 1px solid red; */
+            background-image: url(./images/images03.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+
+        .bg {
+            height: 32vh;
+            width: 100%;
+            /* border: 1px solid green; */
+            background-image: url(./images/images04.jpg);
+            background-position: center;
+            background-size: cover;
+            z-index: -1;
+        }
+
+        .Navbar {
+            height: 6vh;
+            width: 100%;
+            /* border: 1px solid red; */
+            background-color: white;
+            padding: 1px;
+        }
+        .Ld{
+            height: max-content;
+            width: 10%;
+            /* border: 1px solid red; */
+            margin-left: 20px;
+            margin-top: 10px;
+            cursor: pointer;
+            display: inline-block;
+            vertical-align: top;
+
+        }
+        .logo {
+            height: 20px;
+            width: 148px;
+            background-image: url(./images/images05.svg);
+            background-position: center;
+            background-position: center;
+        }
+
+        .ctgry {
+            height: max-content;
+            width: 8%;
+            /* border: 1px solid red; */
+            display: inline-block;
+            vertical-align: top;
+            text-align: center;
+            cursor: pointer;
+            margin-left: 1%
+            ;
+        }
+
+        .ctgry:hover {
+            color: rgb(255, 102, 0);
+        }
+
+        .list {
+            display: inline-block;
+            vertical-align: top;
+            margin-top: 15px;
+            font-size: 13px;
+        }
+
+        .categ {
+            font-weight: normal;
+            display: inline-block;
+            vertical-align: top;
+            margin-top: 10px;
+            font-size: 15px;
+        }
+
+        .rightdiv {
+            height: max-content;
+            width: 75%;
+            /* border: 1px solid red; */
+            display: inline-block;
+            vertical-align: top;
+            text-align: right;
+            float: right;
+        }
+
+        .icons {
+            height: 40px;
+            width: 200px;
+            /* border: 1px solid red; */
+            display: inline-block;
+            vertical-align: top;
+
+        }
+
+        .us {
+            margin-top: 10px;
+            font-size: 18px;
+            margin-left: 25px;
+            cursor: pointer;
+        }
+
+        .us:hover {
+            color: rgb(255, 102, 0);
+
+        }
+
+        .brdrright {
+            border-right: 1px solid;
+            opacity: 0.30;
+            height: 15px;
+            display: inline-block;
+            vertical-align: middle;
+            margin-top: 8px;
+
+        }
+
+        .help {
+            height: max-content;
+            width: 60px;
+            /* border: 1px solid red; */
+            display: inline-block;
+            vertical-align: middle;
+            text-align: center;
+            margin-top: 5px;
+            cursor: pointer;
+        }
+
+        .help:hover {
+            color: rgb(255, 102, 0);
+
+        }
+
+        .hlp {
+            opacity: 0.75;
+            font-weight: normal;
+        }
+
+        .eng {
+            width: 120px;
+        }
+
+        .ship {
+            width: 90px;
+        }
+
+        .flag {
+            height: 20px;
+            width: 20px;
+            /* border: 1px solid red; */
+            background-image: url(https://w7.pngwing.com/pngs/705/871/png-transparent-flag-of-pakistan-national-flag-flag-of-argentina-state-bank-of-pakistan-flag-thumbnail.png);
+            background-position: center;
+            background-size: cover;
+            display: inline-block;
+            vertical-align: middle;
+
+        }
+
+        .PnM {
+            height: max-content;
+            width: 260px;
+            margin: auto;
+            /* border: 1px solid green; */
+            margin-top: 2%;
+            cursor: pointer;
+        }
+
+        .prdct {
+            color: white;
+            border-bottom: 2px solid white;
+            width: 38%;
+            display: inline;
+        }
+
+        .mnfct {
+            color: white;
+            display: inline;
+            margin-left: 30px;
+            font-weight: normal;
+        }
+
+        .whitediv {
+            height: 6vh;
+            width: 48%;
+            background-color: white;
+            border: none;
+            border-radius: 22px;
+            margin-top: 1%;
+            display: inline-block;
+            vertical-align: middle;
+            margin-left: 25%;
+        }
+
+        .srchbar {
+            opacity: 0.70;
+            font-weight: normal;
+            padding: 9px;
+            margin-left: 10px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .cmra {
+            color: black;
+            display: inline-block;
+            vertical-align: middle;
+            margin-left: 53%;
+            font-size: 18px;
+            cursor: pointer;
+            height: max-content;
+            width: 25px;
+            /* border: 1px solid red; */
+        }
+
+        .orngdiv {
+            height: 6vh;
+            width: 130px;
+            border: none;
+            background-color: rgb(255, 106, 0);
+            border-radius: 22px;
+            display: inline-block;
+            vertical-align: middle;
+            white-space: nowrap;
+            margin-left: -100px;
+            margin-top: 15px;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .mfg {
+            padding-top: 10px;
+            color: white;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .find {
+            padding-top: 10px;
+            color: white;
+            display: inline-block;
+            vertical-align: middle;
+            font-weight: normal;
+        }
+
+        .Navlist {
+            list-style: none;
+            color: white;
+            text-align: center;
+            font-size: 14px;
+            margin-top: 8px;
+            cursor: pointer;
+        }
+
+        .navul {
+            display: inline;
+            vertical-align: top;
+            padding: 5px;
+        }
+
+        .navul:hover {
+            text-decoration: underline;
+        }
+
+        .reqdiv {
+            height: max-content;
+            width: 82%;
+            /* border: 1px solid; */
+            background-color: white;
+            border-radius: 12px;
+            margin-top: 10px;
+            z-index: 1;
+            margin-left: 9%;
+            position: absolute;
+        }
+
+        .maindiv {
+            height: 12vh;
+            width: 100%;
+            /* border: 1px solid red; */
+        }
+
+        .side {
+            height: max-content;
+            width: 31%;
+            /* border: 1px solid red; */
+            margin-top: 20px;
+            margin-left: 10px;
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        .trg {
+            /* font-size: 40px; */
+            display: inline-block;
+            vertical-align: top;
+            height: 50px;
+            width: 50px;
+            /* border: 1px solid red; */
+
+        }
+
+        .quo {
+            background-image: url(./images/images15.png);
+            background-position: center;
+            background-size: cover;
+        }
+
+        .shl {
+            background-image: url(./images/images16.png);
+            background-position: center;
+            background-size: cover;
+        }
+
+        .log {
+            background-image: url(./images/images17.png);
+            background-position: center;
+            background-size: cover;
+        }
+
+        .rtext {
+            height: 45px;
+            width: 200px;
+            /* border: 1px solid red; */
+            display: inline-block;
+            vertical-align: top;
+            margin-left: 10px;
+        }
+
+        .slog {
+            opacity: 0.60;
+            font-size: 13px;
+            font-weight: normal;
+            margin-top: 3px;
+        }
+
+        .break {
+            height: 12vh;
+            border-right: 1px solid;
+            opacity: 0.20;
+            display: inline-block;
+            vertical-align: middle;
+            margin: 0;
+        }
+
+        .Section2 {
+            height: max-content;
+            width: 100%;
+            /* border: 1px solid; */
+            background-color: rgb(244, 244, 244);
+            padding: 1px;
+        }
+
+        .frstfloor {
+            height: 60vh;
+            width: 83%;
+            background-color: rgb(255, 255, 255);
+            margin: auto;
+            z-index: -1;
+            margin-top: 70px;
+            border-radius: 12px;
+            padding: 10px;
+        }
+
+        .market {
+            height: 55vh;
+            width: 21%;
+            /* border: 1px solid red; */
+            margin-left: 15px;
+            margin-top: 20px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .mhdng {
+            opacity: 0.80;
+        }
+
+        .bdrbtm {
+            border-bottom: 2px solid;
+            width: 100%;
+            opacity: 0.05;
+            margin-top: 15px;
+        }
+
+        .m1 {
+            height: 40px;
+            width: 100%;
+            /* border: 1px solid red; */
+            margin-top: 10px;
+            cursor: pointer;
+            transition: .34s;
+        }
+
+        .ce {
+            height: 33px;
+            width: 33px;
+            /* border: 1px solid red; */
+            background-image: url(./images/images18.png);
+            background-position: center;
+            background-size: cover;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .tce {
+            display: inline-block;
+            vertical-align: middle;
+            font-weight: normal;
+            margin-left: 5px;
+            /* font-size: 14px; */
+        }
+
+        .msign {
+            float: right;
+            height: 15px;
+            width: 15px;
+            /* border: 1px solid red; */
+            background-image: url(./images/images19.png);
+            background-position: center;
+            background-size: cover;
+            margin-top: 12px;
+        }
+
+        .m1:hover {
+            color: rgb(255, 106, 0);
+            height: 40px;
+            width: 100%;
+            box-shadow: 0px 0px 5px -1px rgba(0, 0, 0, 0.75);
+        }
+
+        .m2 {
+            height: 40px;
+            width: 100%;
+            /* border: 1px solid red; */
+            cursor: pointer;
+            transition: .34s;
+        }
+
+        .ce2 {
+            height: 33px;
+            width: 33px;
+            /* border: 1px solid red; */
+            background-image: url(./images/images20.png);
+            background-position: center;
+            background-size: cover;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .m2:hover {
+            color: rgb(255, 106, 0);
+            height: 40px;
+            width: 100%;
+            box-shadow: 0px 0px 5px -1px rgba(0, 0, 0, 0.75);
+
+        }
+
+        .ce3 {
+            height: 33px;
+            width: 33px;
+            /* border: 1px solid red; */
+            background-image: url(./images/images21.png);
+            background-position: center;
+            background-size: cover;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .ce4 {
+            height: 33px;
+            width: 33px;
+            /* border: 1px solid red; */
+            background-image: url(./images/images22.png);
+            background-position: center;
+            background-size: cover;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .ce5 {
+            height: 33px;
+            width: 33px;
+            /* border: 1px solid red; */
+            background-image: url(./images/images23.png);
+            background-position: center;
+            background-size: cover;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .ce6 {
+            height: 33px;
+            width: 33px;
+            /* border: 1px solid red; */
+            background-image: url(./images/images24.png);
+            background-position: center;
+            background-size: cover;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .ce7 {
+            height: 33px;
+            width: 33px;
+            /* border: 1px solid red; */
+            background-image: url(./images/images25.png);
+            background-position: center;
+            background-size: cover;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .ce8 {
+            height: 33px;
+            width: 33px;
+            /* border: 1px solid red; */
+            background-image: url(./images/images26.png);
+            background-position: center;
+            background-size: cover;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .mainscroll {
+            height: max-content;
+            width: 52%;
+            /* border: 1px solid red; */
+            display: inline-block;
+            vertical-align: middle;
+            margin-top: 20px;
+            margin-left: 10px;
+            overflow: hidden;
+
+
+        }
+
+        .sevenim {
+            height: 350px;
+            width: 3530px;
+            /* border: 1px solid red; */
+            /* position: relative; */
+            /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+            animation: scroll 15s infinite ease alternate;
+
+        }
+
+        @keyframes scroll {
+            0% {
+                margin-left: 0;
+            }
+
+            12% {
+                margin-left: 0;
+            }
+
+            24% {
+                margin-left: -710px;
+            }
+
+            36% {
+                margin-left: -710px;
+            }
+
+            48% {
+                margin-left: -1420px;
+            }
+
+            60% {
+                margin-left: -1420px;
+            }
+
+            72% {
+                margin-left: -2130px;
+            }
+
+            84% {
+                margin-left: -2130px;
+            }
+
+            96% {
+                margin-left: -2840px;
+            }
+
+            100% {
+                margin-left: -2840px;
+            }
+
+        }
+
+        .img1 {
+            height: 350px;
+            width: 700px;
+            display: inline-block;
+            vertical-align: top;
+            margin-left: -5px;
+
+        }
+
+        .one {
+            background-image: url(./images/images27.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+
+        .two {
+            background-image: url(./images/images28.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+
+        .three {
+            background-image: url(./images/images29.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+
+        .four {
+            background-image: url(./images/images30.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+
+        .five {
+            background-image: url(./images/images31.png);
+            background-position: center;
+            background-size: cover;
+        }
+
+        .benefits {
+            height: 50vh;
+            width: 20%;
+            /* border: 1px solid red; */
+            margin-left: 15px;
+            margin-top: 20px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .mhdng {
+            opacity: 0.80;
+        }
+
+        .bn1 {
+            height: 90px;
+            width: 100%;
+            /* border: 1px solid; */
+            border-radius: 8px;
+            background-color: rgb(244, 244, 244);
+            margin-top: 10px;
+            cursor: pointer;
+        }
+
+        .chn1 {
+            height: 80px;
+            margin: auto;
+            width: 240px;
+            /* border: 1px solid red; */
+            margin-top: 5px;
+
+        }
+
+        .des {
+            font-weight: normal;
+            display: inline-block;
+            vertical-align: middle;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+
+        .orpicr {
+            height: 65px;
+            width: 60px;
+            /* border: 1px solid ; */
+            background-image: url(./images/images34.jpg);
+            background-position: center;
+            background-size: cover;
+            display: inline-block;
+            vertical-align: middle;
+            margin-top: 10px;
+            margin-left: 15px;
+            border-radius: 6px;
+        }
+
+        .orpicr2 {
+            height: 65px;
+            width: 60px;
+            /* border: 1px solid ; */
+            background-image: url(./images/images35.jpg);
+            background-position: center;
+            background-size: cover;
+            display: inline-block;
+            vertical-align: middle;
+            margin-top: 10px;
+            margin-left: 24px;
+            border-radius: 6px;
+        }
+
+        .hbp {
+            margin-top: 10px;
+            font-size: 15px;
+        }
+
+        .btn1 {
+            height: 26px;
+            width: 100%;
+            border-radius: 10px;
+            background-color: rgb(255, 106, 0);
+            color: white;
+            text-align: center;
+            margin-top: 10px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .btn2 {
+            height: 26px;
+            width: 100%;
+            border-radius: 10px;
+            border: 1px solid;
+            text-align: center;
+            margin-top: 10px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .scndfloor {
+            height: max-content;
+            width: 83%;
+            margin: auto;
+            margin-top: 20px;
+            /* border: 1px solid red; */
+            background-image: url(./images/images36.jpg);
+            background-position: center;
+            background-size: cover;
+            border-radius: 5px;
+        }
+
+        .scndprnt {
+            height: 33vh;
+            width: 100%;
+            /* border: 1px solid red; */
+            border-radius: 5px;
+        }
+
+        .marchexpo {
+            height: 20vh;
+            width: 39%;
+            /* border: 1px solid red; */
+            margin-top: 45px;
+            margin-left: 30px;
+            display: inline-block;
+            vertical-align: top;
+        }
+        .expohdng{
+            font-size: 28px;
+            color: white;
+        }
+        .trends{
+            color: white;
+            font-size: 19px;
+            margin-top: 10px;
+            font-weight: normal;
+        }
+        .btn3{
+            height: 45px;
+            width: 180px;
+            background-color: white;
+            border: none;
+            border-radius: 26px;
+            font-size: 18px;
+            margin-top: 10px;
+
+        }
+        .deals{
+            height: max-content;
+            width: 56%;
+            /* border: 1px solid red; */
+            display: inline-block;
+            vertical-align: top;
+            margin-top: 13px;
+        }
+        .deal1{
+            height: max-content;
+            width: 220px;
+            /* border: 1px solid red; */
+            background-color: white;
+            border-radius: 5px;
+            display: inline-block;
+            vertical-align: top;
+            margin-left: 10px;
+        }
+        .chd{
+            height: 27vh;
+            width: 85%;
+            margin: auto;
+            /* border: 1px solid red; */
+            margin-top: 15px;
+        }
+        .lwstp{
+            font-size: 14px;
+            margin-top: 20px;
+        }
+        .save{
+            font-weight: normal;
+            font-size: 12px;
+
+        }
+        .imdiv{
+            height: max-content;
+            width: 70%;
+            /* border: 1px solid red; */
+            background-color: rgb(247,247,247);
+            border-radius: 2px;
+            margin: auto;
+            margin-top: 10px;
+        }
+        .laptop{
+            height: 80px;
+            width: 100px;
+            margin-left: 15px;
+            margin-top: 20px;
+
+        }
+        .thirdfloor{
+            height: max-content;
+            width: 85%;
+            /* border: 1px solid red; */
+            margin: auto;
+            margin-top: 5px;
+        }
+        .sixwhited{
+            height: 200px;
+            width: 32%;
+            /* border: 1px solid red; */
+            background-color: white;
+            border-radius: 9px;
+            display: inline-block;
+            vertical-align: top;
+            margin-left: 10px;
+            margin-top: 16px;
+            cursor: pointer;
+        }
+        .child{
+            height: max-content;
+            width: 93%;
+            margin: auto;
+            /* border: 1px solid green; */
+            margin-top: 2%;
+        }
+        .NA{
+            opacity: 0.90;
+        }
+        .graych{
+            height: 150px;
+            width: 31%;
+            /* border: 1px solid green; */
+            display: inline-block;
+            vertical-align: middle;
+            margin-top: 10px;
+            margin-left: 4px;
+        }
+        .pc1{
+            height: 100px;
+            width: 100%;
+            background-color: rgb(247,247,247);
+            border-radius: 5px;
+            padding: 1px;
+
+        }
+        .arr1{
+            height: 60px;
+            width: 60px;
+            /* border: 1px solid red; */
+            background-image: url(./newim/images1\ \(6\).jpg);
+            background-position: center;
+            background-size: cover;
+            margin: auto;
+            margin-top: 20px;
+        }
+        .dlr{
+            text-align: center;
+            margin-top: 5px;
+        }
+        .qntty{
+            text-align: center;
+            font-weight: normal;
+        }
+        .arr2{
+            height: 60px;
+            width: 60px;
+            /* border: 1px solid red; */
+            background-image: url(./newim/images1\ \(7\).jpg);
+            background-position: center;
+            background-size: cover;
+            margin: auto;
+            margin-top: 20px;
+        }
+        .arr3{
+            height: 60px;
+            width: 60px;
+            /* border: 1px solid red; */
+            background-image: url(./newim/images1\ \(8\).jpg);
+            background-position: center;
+            background-size: cover;
+            margin: auto;
+            margin-top: 20px;
+        }
+        .arr4{
+            height: 60px;
+            width: 60px;
+            /* border: 1px solid red; */
+            background-image: url(./newim/images1.jpg);
+            background-position: center;
+            background-size: cover;
+            margin: auto;
+            margin-top: 20px;
+        }
+        .arr5{
+            height: 60px;
+            width: 60px;
+            /* border: 1px solid red; */
+            background-image: url(./newim/images1\ \(1\).jpg);
+            background-position: center;
+            background-size: cover;
+            margin: auto;
+            margin-top: 20px;
+        }
+        .arr6{
+            height: 60px;
+            width: 60px;
+            /* border: 1px solid red; */
+            background-image: url(./newim/images1\ \(2\).jpg);
+            background-position: center;
+            background-size: cover;
+            margin: auto;
+            margin-top: 20px;
+        }
+        .arr7{
+            height: 60px;
+            width: 60px;
+            /* border: 1px solid red; */
+            background-image: url(https://i0.wp.com/www.applestore.pk/wp-content/uploads/2020/12/AirPods-Pro-iShop-karachi.jpg?fit=572%2C572&ssl=1);
+            background-position: center;
+            background-size: cover;
+            margin: auto;
+            margin-top: 20px;
+        }
+        .arr8{
+            height: 60px;
+            width: 60px;
+            /* border: 1px solid red; */
+            background-image: url(./newim/images1.png);
+            background-position: center;
+            background-size: cover;
+            margin: auto;
+            margin-top: 20px;
+        }
+        .arr9{
+            height: 60px;
+            width: 60px;
+            /* border: 1px solid red; */
+            background-image: url(./newim/images1\ \(3\).jpg);
+            background-position: center;
+            background-size: cover;
+            margin: auto;
+            margin-top: 20px;
+        }
+        .discount{
+            height: max-content;
+            width: 40px;
+            background-color: rgb(255, 106, 0);
+            border-radius: 9px;
+            color: white;
+            text-align: center;
+            margin-left: 36px;
+            margin-top: 5px;
+
+        }
+        .arr10{
+            height: 60px;
+            width: 60px;
+            /* border: 1px solid red; */
+            background-image: url(./newim/images1\ \(4\).jpg);
+            background-position: center;
+            background-size: cover;
+            margin: auto;
+            margin-top: 20px;
+        }
+        .arr11{
+            height: 60px;
+            width: 60px;
+            /* border: 1px solid red; */
+            background-image: url(./newim/images1\ \(5\).jpg);
+            background-position: center;
+            background-size: cover;
+            margin: auto;
+            margin-top: 20px;
+        }
+        .arr12{
+            height: 60px;
+            width: 60px;
+            /* border: 1px solid red; */
+            background-image: url(./newim/images1\ \(1\).png);
+            background-position: center;
+            background-size: cover;
+            margin: auto;
+            margin-top: 20px;
+        }
+        .arr13{
+            height: 60px;
+            width: 60px;
+            /* border: 1px solid red; */
+            background-image: url(./newim/images15.jpg);
+            background-position: center;
+            background-size: cover;
+            margin: auto;
+            margin-top: 20px;
+        }
+        .arr14{
+            height: 60px;
+            width: 60px;
+            /* border: 1px solid red; */
+            background-image: url(./newim/images1\ \(14\).jpg);
+            background-position: center;
+            background-size: cover;
+            margin: auto;
+            margin-top: 20px;
+        }
+        .arr15{
+            height: 60px;
+            width: 60px;
+            /* border: 1px solid red; */
+            background-image: url(./newim/images1\ \(12\).jpg);
+            background-position: center;
+            background-size: cover;
+            margin: auto;
+            margin-top: 20px;
+        }
+        .arr16{
+            height: 60px;
+            width: 60px;
+            /* border: 1px solid red; */
+            background-image: url(./newim/images1\ \(13\).jpg);
+            background-position: center;
+            background-size: cover;
+            margin: auto;
+            margin-top: 20px;
+        }
+        .arr17{
+            height: 60px;
+            width: 60px;
+            /* border: 1px solid red; */
+            background-image: url(./newim/images1\ \(11\).jpg);
+            background-position: center;
+            background-size: cover;
+            margin: auto;
+            margin-top: 20px;
+        }
+        .arr18{
+            height: 60px;
+            width: 60px;
+            /* border: 1px solid red; */
+            background-image: url(./newim/images1\ \(10\).jpg);
+            background-position: center;
+            background-size: cover;
+            margin: auto;
+            margin-top: 20px;
+        }
+        .forthfloor{
+            height: max-content;
+            width: 83%;
+            margin: auto;
+            /* border: 1px solid red; */
+            margin-top: 20px;
+        }
+        .ppe{
+            height: max-content;
+            width: 32%;
+            /* border: 1px solid red; */
+            display: inline-block;
+            vertical-align: top;
+            margin-left: 10px;
+        }
+        .eqdiv{
+            height: 26vh;
+            width: 100%;
+            /* border: 1px solid green; */
+            background-color: white;
+            margin-top: 20px;
+            border-radius: 10px;
+
+        }
+        .pro{
+            height: 175px;
+            width: 45%;
+            /* border: 1px solid red; */
+            display: inline-block;
+            vertical-align: top;
+            margin-top: 10px;
+            margin-left: 10px;
+        }
+        .bpm{
+            height: 120px;
+            width: 180px;
+            /* border: 1px solid red; */
+            background-image: url(./images/images61.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+        .btn4{
+            height: 40px;
+            width: 140px;
+            background-color: rgb(255, 106, 0);
+            border: none;
+            margin-left: 20px;
+            margin-top: 10px;
+            border-radius: 22px;
+            color: white;
+            font-weight: bold;
+            font-size: 16px;
+            cursor: pointer;
+            transition: .34s;
+        }
+        .btn4:hover{
+            background-color: rgb(189, 79, 1);
+        }
+        .pen{
+            height: 120px;
+            width: 120px;
+            /* border: 1px solid red; */
+            background-image: url(./images/images62.jpg);
+            background-position: center;
+            background-size: cover;
+            margin-left: 30px;
+        }
+        .live{
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .graydiv{
+            display: inline-block;
+            vertical-align: middle;
+            height: 5px;
+            width: 79%;
+            background-color: rgb(220,222,227);
+            border-radius: 4px;
+            margin-left: 30px;
+
+        }
+        .graydiv2{
+            display: inline-block;
+            vertical-align: middle;
+            height: 5px;
+            width: 50%;
+            background-color: rgb(220,222,227);
+            border-radius: 4px;
+            margin-left: 30px;
+
+        }
+        .hldr{
+            height: 110px;
+            width: 110px;
+            margin-left: 30px;
+            margin-top: 10px;
+            /* border: 1px solid red; */
+            background-image: url(./newim/images6.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+        .box{
+            height: 110px;
+            width: 110px;
+            margin-left: 30px;
+            margin-top: 10px;
+            /* border: 1px solid red; */
+            background-image: url(./newim/images2.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+        .case{
+            height: 110px;
+            width: 110px;
+            margin-left: 30px;
+            margin-top: 10px;
+            /* border: 1px solid red; */
+            background-image: url(./newim/images3.jpg);
+            background-position: center;
+            background-size: cover;
+        }
+        .shoes{
+            height: 110px;
+            width: 110px;
+            margin-left: 30px;
+            margin-top: 10px;
+            /* border: 1px solid red; */
+            background-image: url(./newim/images4.png);
+            background-position: center;
+            background-size: cover;
+        }
+        .foryou{
+            height: max-content;
+            width: 83%;
+            margin: auto;
+            /* border: 1px solid red; */
+            margin-top: 20px;
+        }
+        .prnt5{
+            height: max-content;
+            width: 100%;
+            /* border: 1px solid red; */
+            margin-top: 10px;
+            margin: auto;
+        }
+        .productdiv{
+            height: 46vh;
+            width: 19%;
+            /* border: 1px solid green; */
+            background-color: white;
+            border-radius: 7px;
+            display: inline-block;
+            vertical-align: top;
+            margin: 4px;
+            margin-top: 10px;
+            cursor: pointer;
+            
+        }
+        .pd1{
+            height: 220px;
+            width: auto;
+            /* border: 1px solid red; */
+            background-image: url(./newdownload/images01.jpg);
+            background-position: center;
+            background-size: cover;
+            border-top-left-radius: 7px;
+            border-top-right-radius: 7px;
+        
+        }
+        .pddes{
+            font-weight: normal;
+            margin-left: 3%;
+            margin-top: 5px;
+        }
+        .dlr2{
+            margin-top: 5px;
+            margin-left: 3%;
+        }
+        .pd2{
+            height: 220px;
+            width: auto;
+            /* border: 1px solid red; */
+            background-image: url(./newdownload/images02.jpg);
+            background-position: center;
+            background-size: cover;
+            border-top-left-radius: 7px;
+            border-top-right-radius: 7px;
+        
+        }
+        .pd3{
+            height: 220px;
+            width: auto;
+            /* border: 1px solid red; */
+            background-image: url(./newdownload/images03.jpg);
+            background-position: center;
+            background-size: cover;
+            border-top-left-radius: 7px;
+            border-top-right-radius: 7px;
+        
+        }
+        .pd4{
+            height: 220px;
+            width: auto;
+            /* border: 1px solid red; */
+            background-image: url(./newdownload/images04.jpg);
+            background-position: center;
+            background-size: cover;
+            border-top-left-radius: 7px;
+            border-top-right-radius: 7px;
+        
+        }
+        .pd5{
+            height: 220px;
+            width: auto;
+            /* border: 1px solid red; */
+            background-image: url(./newdownload/images05.jpg);
+            background-position: center;
+            background-size: cover;
+            border-top-left-radius: 7px;
+            border-top-right-radius: 7px;
+        
+        }
+        .pd6{
+            height: 220px;
+            width: auto;
+            /* border: 1px solid red; */
+            background-image: url(./newdownload/images06.jpg);
+            background-position: center;
+            background-size: cover;
+            border-top-left-radius: 7px;
+            border-top-right-radius: 7px;
+        
+        }
+        .pd7{
+            height: 220px;
+            width: auto;
+            /* border: 1px solid red; */
+            background-image: url(./newdownload/images07.jpg);
+            background-position: center;
+            background-size: cover;
+            border-top-left-radius: 7px;
+            border-top-right-radius: 7px;
+        
+        }
+        .pd8{
+            height: 220px;
+            width: auto;
+            /* border: 1px solid red; */
+            background-image: url(./newdownload/images08.jpg);
+            background-position: center;
+            background-size: cover;
+            border-top-left-radius: 7px;
+            border-top-right-radius: 7px;
+        
+        }
+        .pd9{
+            height: 220px;
+            width: auto;
+            /* border: 1px solid red; */
+            background-image: url(./newdownload/images09.jpg);
+            background-position: center;
+            background-size: cover;
+            border-top-left-radius: 7px;
+            border-top-right-radius: 7px;
+        
+        }
+        .pd10{
+            height: 220px;
+            width: auto;
+            /* border: 1px solid red; */
+            background-image: url(./newdownload/images1.png);
+            background-position: center;
+            background-size: cover;
+            border-top-left-radius: 7px;
+            border-top-right-radius: 7px;
+        
+        }
+        .pd11{
+            height: 220px;
+            width: auto;
+            /* border: 1px solid red; */
+            background-image: url(./newdownload/images01.png);
+            background-position: center;
+            background-size: cover;
+            border-top-left-radius: 7px;
+            border-top-right-radius: 7px;
+        
+        }
+        .pd12{
+            height: 220px;
+            width: auto;
+            /* border: 1px solid red; */
+            background-image: url(./newdownload/images02\ \(1\).jpg);
+            background-position: center;
+            background-size: cover;
+            border-top-left-radius: 7px;
+            border-top-right-radius: 7px;
+        
+        }
+        .pd13{
+            height: 220px;
+            width: auto;
+            /* border: 1px solid red; */
+            background-image: url(./newdownload/images03\ \(1\).jpg);
+            background-position: center;
+            background-size: cover;
+            border-top-left-radius: 7px;
+            border-top-right-radius: 7px;
+        
+        }
+        .pd14{
+            height: 220px;
+            width: auto;
+            /* border: 1px solid red; */
+            background-image: url(./newdownload/images04\ \(1\).jpg);
+            background-position: center;
+            background-size: cover;
+            border-top-left-radius: 7px;
+            border-top-right-radius: 7px;
+        
+        }
+        .pd15{
+            height: 220px;
+            width: auto;
+            /* border: 1px solid red; */
+            background-image: url(./newdownload/images05\ \(1\).jpg);
+            background-position: center;
+            background-size: cover;
+            border-top-left-radius: 7px;
+            border-top-right-radius: 7px;
+        
+        }
+        .pd16{
+            height: 220px;
+            width: auto;
+            /* border: 1px solid red; */
+            background-image: url(./newdownload/images06\ \(1\).jpg);
+            background-position: center;
+            background-size: cover;
+            border-top-left-radius: 7px;
+            border-top-right-radius: 7px;
+        
+        }
+        .pd17{
+            height: 220px;
+            width: auto;
+            /* border: 1px solid red; */
+            background-image: url(./newdownload/images07\ \(1\).jpg);
+            background-position: center;
+            background-size: cover;
+            border-top-left-radius: 7px;
+            border-top-right-radius: 7px;
+        
+        }
+        .pd18{
+            height: 220px;
+            width: auto;
+            /* border: 1px solid red; */
+            background-image: url(./newdownload/images08\ \(1\).jpg);
+            background-position: center;
+            background-size: cover;
+            border-top-left-radius: 7px;
+            border-top-right-radius: 7px;
+        
+        }
+        .pd19{
+            height: 220px;
+            width: auto;
+            /* border: 1px solid red; */
+            background-image: url(./newdownload/images09\ \(1\).jpg);
+            background-position: center;
+            background-size: cover;
+            border-top-left-radius: 7px;
+            border-top-right-radius: 7px;
+        
+        }
+        .pd20{
+            height: 220px;
+            width: auto;
+            /* border: 1px solid red; */
+            background-image: url(./newdownload/images10.jpg);
+            background-position: center;
+            background-size: cover;
+            border-top-left-radius: 7px;
+            border-top-right-radius: 7px;
+        
+        }
+        .pd21{
+            height: 220px;
+            width: auto;
+            /* border: 1px solid red; */
+            background-image: url(./newdownload/images11.jpg);
+            background-position: center;
+            background-size: cover;
+            border-top-left-radius: 7px;
+            border-top-right-radius: 7px;
+        
+        }
+        .pd22{
+            height: 220px;
+            width: auto;
+            /* border: 1px solid red; */
+            background-image: url(./newdownload/images12.jpg);
+            background-position: center;
+            background-size: cover;
+            border-top-left-radius: 7px;
+            border-top-right-radius: 7px;
+        
+        }
+        .pd23{
+            height: 220px;
+            width: auto;
+            /* border: 1px solid red; */
+            background-image: url(./newdownload/images13.jpg);
+            background-position: center;
+            background-size: cover;
+            border-top-left-radius: 7px;
+            border-top-right-radius: 7px;
+        
+        }
+        .pd24{
+            height: 220px;
+            width: auto;
+            /* border: 1px solid red; */
+            background-image: url(./newdownload/images14.jpg);
+            background-position: center;
+            background-size: cover;
+            border-top-left-radius: 7px;
+            border-top-right-radius: 7px;
+        
+        }
+        .pd25{
+            height: 220px;
+            width: auto;
+            /* border: 1px solid red; */
+            background-image: url(./newdownload/images15.jpg);
+            background-position: center;
+            background-size: cover;
+            border-top-left-radius: 7px;
+            border-top-right-radius: 7px;
+        
+        }
+        .pd26{
+            height: 220px;
+            width: auto;
+            /* border: 1px solid red; */
+            background-image: url(./newdownload/images16.jpg);
+            background-position: center;
+            background-size: cover;
+            border-top-left-radius: 7px;
+            border-top-right-radius: 7px;
+        
+        }
+        .pd27{
+            height: 220px;
+            width: auto;
+            /* border: 1px solid red; */
+            background-image: url(./newdownload/images17.png);
+            background-position: center;
+            background-size: cover;
+            border-top-left-radius: 7px;
+            border-top-right-radius: 7px;
+        
+        }
+        .pd28{
+            height: 220px;
+            width: auto;
+            /* border: 1px solid red; */
+            background-image: url(./newdownload/images18.png);
+            background-position: center;
+            background-size: cover;
+            border-top-left-radius: 7px;
+            border-top-right-radius: 7px;
+        
+        }
+        .pd29{
+            height: 220px;
+            width: auto;
+            /* border: 1px solid red; */
+            background-image: url(./newdownload/images19.jpg);
+            background-position: center;
+            background-size: cover;
+            border-top-left-radius: 7px;
+            border-top-right-radius: 7px;
+        
+        }
+        .pd30{
+            height: 220px;
+            width: auto;
+            /* border: 1px solid red; */
+            background-image: url(./newdownload/images20.jpg);
+            background-position: center;
+            background-size: cover;
+            border-top-left-radius: 7px;
+            border-top-right-radius: 7px;
+        
+        }
+        .pd31{
+            height: 220px;
+            width: auto;
+            /* border: 1px solid red; */
+            background-image: url(./newdownload/images21.jpg);
+            background-position: center;
+            background-size: cover;
+            border-top-left-radius: 7px;
+            border-top-right-radius: 7px;
+        
+        }
+        .pd32{
+            height: 220px;
+            width: auto;
+            /* border: 1px solid red; */
+            background-image: url(./newdownload/images22.jpg);
+            background-position: center;
+            background-size: cover;
+            border-top-left-radius: 7px;
+            border-top-right-radius: 7px;
+        
+        }
+        .pd33{
+            height: 220px;
+            width: auto;
+            /* border: 1px solid red; */
+            background-image: url(./newdownload/images23.jpg);
+            background-position: center;
+            background-size: cover;
+            border-top-left-radius: 7px;
+            border-top-right-radius: 7px;
+        
+        }
+        .pd34{
+            height: 220px;
+            width: auto;
+            /* border: 1px solid red; */
+            background-image: url(./newdownload/images24.jpg);
+            background-position: center;
+            background-size: cover;
+            border-top-left-radius: 7px;
+            border-top-right-radius: 7px;
+        
+        }
+        .pd35{
+            height: 220px;
+            width: auto;
+            /* border: 1px solid red; */
+            background-image: url(./newdownload/images25.jpg);
+            background-position: center;
+            background-size: cover;
+            border-top-left-radius: 7px;
+            border-top-right-radius: 7px;
+        
+        }
+        .pd36{
+            height: 220px;
+            width: auto;
+            /* border: 1px solid red; */
+            background-image: url(./newdownload/images26.jpg);
+            background-position: center;
+            background-size: cover;
+            border-top-left-radius: 7px;
+            border-top-right-radius: 7px;
+        
+        }
+        .pd37{
+            height: 220px;
+            width: auto;
+            /* border: 1px solid red; */
+            background-image: url(./newdownload/images27.jpg);
+            background-position: center;
+            background-size: cover;
+            border-top-left-radius: 7px;
+            border-top-right-radius: 7px;
+        
+        }
+        .pd38{
+            height: 220px;
+            width: auto;
+            /* border: 1px solid red; */
+            background-image: url(./newdownload/images28.jpg);
+            background-position: center;
+            background-size: cover;
+            border-top-left-radius: 7px;
+            border-top-right-radius: 7px;
+        
+        }
+        .pd39{
+            height: 220px;
+            width: auto;
+            /* border: 1px solid red; */
+            background-image: url(./newdownload/images30.png);
+            background-position: center;
+            background-size: cover;
+            border-top-left-radius: 7px;
+            border-top-right-radius: 7px;
+        
+        }
+        .pd40{
+            height: 220px;
+            width: auto;
+            /* border: 1px solid red; */
+            background-image: url(./newdownload/images29.jpg);
+            background-position: center;
+            background-size: cover;
+            border-top-left-radius: 7px;
+            border-top-right-radius: 7px;
+        
+        }
+        .fifthfloor{
+            height: max-content;
+            width: 83%;
+            margin: auto;
+            /* border: 1px solid red; */
+            margin-top: 20px;
+        }
+        .trade{
+            height: max-content;
+            width: 98%;
+            /* border: 1px solid green; */
+            margin: auto;
+
+        }
+        .service{
+            display: inline;
+        }
+        .serhelp{
+            display: inline;
+            opacity: 0.60;
+            margin-left: 10px;
+            font-weight: normal;
+        }
+        .main5{
+            height: max-content;
+            width: 100%;
+            /* border: 1px solid brown; */
+        }
+        .servdiv{
+            height: 34vh;
+            width: 23%;
+            /* border: 1px solid green; */
+            border-radius: 6px;
+            display: inline-block;
+            vertical-align: top;
+            margin-top: 20px;
+            margin: 10px;
+            background-color: white;
+        }
+        .assurance{
+            height: 170px;
+            width: auto;
+            /* border: 1px solid; */
+            background-image: url(./images/images70.jpg);
+            background-position: right;
+            background-size: cover;
+            border-top-right-radius: 7px;
+            border-top-left-radius: 7px;
+        }
+        .assurance2{
+            height: 170px;
+            width: auto;
+            /* border: 1px solid; */
+            background-image: url(./images/images72.jpg);
+            background-position: right;
+            background-size: cover;
+            border-top-right-radius: 7px;
+            border-top-left-radius: 7px;
+        }
+        .assurance3{
+            height: 170px;
+            width: auto;
+            /* border: 1px solid; */
+            background-image: url(./images/images73.jpg);
+            background-position: right;
+            background-size: cover;
+            border-top-right-radius: 7px;
+            border-top-left-radius: 7px;
+        }
+        .assurance4{
+            height: 170px;
+            width: auto;
+            /* border: 1px solid; */
+            background-image: url(./images/images74.jpg);
+            background-position: right;
+            background-size: cover;
+            border-top-right-radius: 7px;
+            border-top-left-radius: 7px;
+        }
+        .sply{
+            margin-top: 30px;
+        }
+        .flagdiv{
+            height: 50px;
+            width: 100%;
+            /* border: 1px solid hotpink; */
+            margin-top: 30px;
+        
+        }
+        .cntry1{
+            height: 20px;
+            width: 30px;
+            /* border: 1px solid red; */
+            background-image: url(https://upload.wikimedia.org/wikipedia/en/thumb/9/9e/Flag_of_Japan.svg/1200px-Flag_of_Japan.svg.png);
+            background-position: center;
+            background-size: cover;
+            display: inline-block;
+            vertical-align: middle;
+            margin-top: 10px;
+            margin-left: 20px;
+
+        }
+        .c1{
+            opacity: 0.60;
+            font-weight: normal;
+            display: inline-block;
+            vertical-align: middle;
+            margin-top: 8px;
+            cursor: pointer;
+        }
+        .c1:hover{
+            color: rgb(255, 89, 0);
+        }
+        .c2{
+            opacity: 0.60;
+            font-weight: normal;
+            display: inline-block;
+            vertical-align: middle;
+            margin-top: 8px;
+            cursor: pointer;
+            margin-left: 40px;
+        }
+        .c2:hover{
+            color: rgb(255, 106, 0);
+        }
+        .cntry2{
+            height: 15px;
+            width: 27px;
+            /* border: 1px solid red; */
+            background-image: url(https://cdn.britannica.com/33/4833-004-828A9A84/Flag-United-States-of-America.jpg);
+            background-position: center;
+            background-size: cover;
+            display: inline-block;
+            vertical-align: middle;
+            margin-top: 10px;
+            margin-left: 40px;
+
+        }
+        .cntry3{
+            height: 15px;
+            width: 27px;
+            /* border: 1px solid red; */
+            background-image: url(https://upload.wikimedia.org/wikipedia/en/thumb/0/03/Flag_of_Italy.svg/255px-Flag_of_Italy.svg.png);
+            background-position: center;
+            background-size: cover;
+            display: inline-block;
+            vertical-align: middle;
+            margin-top: 10px;
+            margin-left: 40px;
+
+        }
+        .cntry4{
+            height: 15px;
+            width: 27px;
+            /* border: 1px solid red; */
+            background-image: url(https://cdn.britannica.com/82/4782-004-4119489D/Flag-Turkey.jpg);
+            background-position: center;
+            background-size: cover;
+            display: inline-block;
+            vertical-align: middle;
+            margin-top: 10px;
+            margin-left: 40px;
+
+        }
+        .cntry5{
+            height: 15px;
+            width: 27px;
+            /* border: 1px solid red; */
+            background-image: url(https://static.vecteezy.com/system/resources/previews/003/249/322/original/flag-of-malaysia-isolated-for-print-and-web-free-vector.jpg);
+            background-position: center;
+            background-size: cover;
+            display: inline-block;
+            vertical-align: middle;
+            margin-top: 10px;
+            margin-left: 40px;
+
+        }
+        .cntry6{
+            height: 15px;
+            width: 27px;
+            /* border: 1px solid red; */
+            background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/7/76/Flag_of_South_Korea_%281997%E2%80%932011%29.svg/220px-Flag_of_South_Korea_%281997%E2%80%932011%29.svg.png);
+            background-position: center;
+            background-size: cover;
+            display: inline-block;
+            vertical-align: middle;
+            margin-top: 10px;
+            margin-left: 40px;
+
+        }
+        .cntry7{
+            height: 15px;
+            width: 27px;
+            /* border: 1px solid red; */
+            background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Flag_of_Vietnam.svg/2000px-Flag_of_Vietnam.svg.png);
+            background-position: center;
+            background-size: cover;
+            display: inline-block;
+            vertical-align: middle;
+            margin-top: 10px;
+            margin-left: 40px;
+
+        }
+        .cntry8{
+            height: 15px;
+            width: 27px;
+            /* border: 1px solid red; */
+            background-image: url(https://cdn.britannica.com/42/3842-004-F47B77BC/Flag-Russia.jpg);
+            background-position: center;
+            background-size: cover;
+            display: inline-block;
+            vertical-align: middle;
+            margin-top: 10px;
+            margin-left: 40px;
+
+        }
+        .cntry9{
+            height: 15px;
+            width: 27px;
+            /* border: 1px solid red; */
+            background-image: url(https://c4.wallpaperflare.com/wallpaper/698/202/493/thailand-flag-national-symbol-thailand-large-flag-flag-of-thailand-hd-wallpaper-preview.jpg);
+            background-position: center;
+            background-size: cover;
+            display: inline-block;
+            vertical-align: middle;
+            margin-top: 10px;
+            margin-left: 40px;
+
+        }
+        .expo2{
+            height: 8vh;
+            width: 98%;
+            /* border: 1px solid red; */
+            background-image: url(./images/images76.png);
+            background-position: center;
+            background-size: cover;
+            margin: auto;
+            margin-top: 20px;
+        }
+        
+       
+       
+        @media screen and (max-width:1000px){
+        .whitediv{
+            width: 60%;
+        }
+        .cmra{
+            margin-left: 43%;
+        }
+        .orngdiv{
+            margin-top: 10px;
+        }
+        .reqdiv{
+            width: 86%;
+            margin-left: 7%;
+        }
+        .frstfloor{
+            width: 86%;
+            height: 70vh;
+        }
+        .scndfloor{
+            width: 86%;
+        }
+        .tce{
+            font-size: 9px;
+        }
+        .chn1{
+            width: 230px;
+        }
+        .des{
+            font-size: 10px;
+
+        }
+        .hbp{
+            font-size: 10px;
+        }
+        .deal1{
+            width: 30%;
+        }
+        .laptop{
+            height: 40px;
+            width: 40px;
+        }
+        .sixwhited{
+            width: 45%;
+        }
+        .forthfloor{
+            width: 100%;
+        }
+        .productdiv{
+            width: 23%;
+            height: 54vh;
+        }
+        .foryou{
+            width: 90%;
+            margin-left: 6%;
+        }
+        .fifthfloor{
+            width: 90%;
+        }
+        .servdiv{
+            width: 22%;
+        }
+       }
+       @media screen and (max-width:815px){
+      
+        .side{
+            width: 50%;
+            
+        }
+        .break{
+            display: none;
+        }
+        .cmra{
+            display: none;
+        }
+        .orngdiv{
+            margin-top: 7px;
+        }
+        .market{
+            width: 100%;
+            margin-top: 20%;
+        }
+        .mainscroll{
+            display: none;
+        }
+        .benefits{
+            width: 100%;
+        }
+        .scndfloor{
+            margin-top: 60%;
+            width: 100%;
+        }
+        .sixwhited{
+            width: 48%;
+        }
+        .ppe{
+            width: 45%;
+        }
+        .graydiv{
+            width: 70%;
+        }
+        .graydiv2{
+            width: 45%;
+        }
+        .eqdiv{
+            height: 190px;
+        }
+        .productdiv{
+            width: 29%;
+        }
+        .servdiv{
+            width: 46%;
+        }
+     
+       }
+       @media screen and (max-width:784px){
+        .sixwhited{
+            width: 80%;
+            margin-left: 10%;
+        }
+       }
+
+       @media screen and (max-width:767px){
+        
+        .side{
+            width: 100%;
+            
+        }
+        .break{
+            display: none;
+        }
+        .marchexpo{
+            width: 35%;
+        }
+        .scndfloor{
+            margin-top: 70%;
+        }
+        .deals{
+            width: 57%;
+        }
+        .deal1{
+            width: 29%;
+        }
+        .ppe{
+            width: 60%;
+            margin-left: 20%;
+        }
+        .productdiv{
+            width: 45%;
+        }
+       }
+       @media screen and (max-width:617px){
+        .servdiv{
+            width: 80%;
+        }
+        .expo2{
+            margin-top: 10%;
+            width: auto;
+        }
+       }
+
+       @media screen and (max-width:516px) {
+        .srchbar{
+           display: none;
+        }
+        .mainscroll{
+            display: none;
+        }
+        .frstfloor{
+            margin-top: 30%;
+        }
+        .benefits{
+            width: 100%;
+        }
+        .scndfloor{
+            margin-top: 70%;
+        }
+        .marchexpo{
+            width: 70%;
+        }
+        .deals{
+            width: 100%;
+        }
+        .help{
+            display: none;
+        }
+        .thirdfloor{
+            margin-top: 35%;
+        }
+        .ppe{
+            width: 80%;
+            margin-left: 10%;
+        }
+       }
+       @media screen and (max-width:474px){
+        .scndfloor{
+            margin-top: 75%;
+        }
+        .productdiv{
+            width: 90%;
+        }
+       }
+       @media screen and (max-width:470px){
+        .sixwhited{
+            width: 90%;
+        }
+        .expo2{
+            margin-top: 10%;
+            width: auto;
+        }
+      
+       }
+       @media screen and (max-width:436px){
+        .scndfloor{
+            margin-top: 80%;
+        }
+        .thirdfloor{
+            margin-top: 40%;
+        }
+        .expo2{
+            margin-top: 20%;
+            width: auto;
+        }
+       }
+       @media screen and (max-width:411px){
+        .rightdiv{
+            display: none;
+        }
+        .market{
+            margin-top: 36%;
+        }
+        .scndfloor{
+            margin-top: 100%;
+        }
+        .sixwhited{
+            width: 100%;
+            margin-left: -1%;
+        }
+        .thirdfloor{
+            margin-top: 40%;
+        }
+        .ppe{
+            width: 90%;
+            margin-left: 4%;
+        }
+       }
+       
+       
+            
+        
+    </style>
+</head>
+
+<body>
+    <div class="Section1">
+        <div class="expo"></div>
+        <div class="bg">
+            <div class="Navbar">
+                <div class="Ld">
+                    <div class="logo"></div>
+                </div>
+                <!-- <div class="ctgry">
+                    <i class="fa-solid fa-list-ul list"></i>
+                    <h3 class="categ">Categories</h3>
+                </div> -->
+                <div class="rightdiv">
+                    <div class="icons">
+                        <i class="fa-solid fa-user us"></i>
+                        <i class="fa-solid fa-message us"></i>
+                        <i class="fa-solid fa-clipboard us"></i>
+                        <i class="fa-solid fa-cart-shopping  us"></i>
+
+                    </div>
+                    <div class="brdrright"></div>
+                    <div class="help">
+                        <h4 class="hlp">Help</h4>
+                    </div>
+                    <div class="brdrright"></div>
+                    <div class="help eng">
+                        <h4 class="hlp">English - USD</h4>
+                    </div>
+                    <div class="help ship">
+                        <h4 class="hlp">Ship to:
+                            <div class="flag"></div>
+                        </h4>
+                    </div>
+                    <div class="brdrright"></div>
+                    <div class="help">
+                        <h4 class="hlp">More</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="PnM">
+                <h2 class="prdct">Products</h2>
+                <h3 class="mnfct">Manufacturers</h3>
+            </div>
+            <div class="whitediv">
+                <h4 class="srchbar">What are you looking for?</h4>
+                <i class="fa-solid fa-camera-retro cmra"></i>
+            </div>
+            <div class="orngdiv">
+                <i class="fa-solid fa-magnifying-glass mfg"></i>
+                <h4 class="find">Search</h4>
+            </div>
+            <ul class="Navlist">
+                <li class="navul">scrap motors</li>
+                <li class="navul">shoes men walking shoe</li>
+                <li class="navul">wallpaper</li>
+                <li class="navul">ssd 1tb</li>
+                <li class="navul">baby diapers</li>
+                <li class="navul">vr box</li>
+                <li class="navul">led tv</li>
+            </ul>
+            <div class="reqdiv">
+                <div class="maindiv">
+                    <div class="side">
+                        <div class="trg quo"></div>
+                        <div class="rtext">
+                            <h3 class="reqq">Request for Quotation</h3>
+                            <h5 class="slog">One request, multiple quotes</h5>
+                        </div>
+                    </div>
+                    <div class="break"></div>
+                    <div class="side">
+                        <div class="trg shl"></div>
+                        <div class="rtext">
+                            <h3 class="reqq">Ready to Ship</h3>
+                            <h5 class="slog">Order directly with fast dispatch</h5>
+                        </div>
+                    </div>
+                    <div class="break"></div>
+                    <div class="side">
+                        <div class="trg log"></div>
+                        <div class="rtext">
+                            <h3 class="reqq">Logistics services</h3>
+                            <h5 class="slog">Reliable shipping by ocean and air</h5>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="Section2">
+        <div class="frstfloor">
+            <div class="market">
+                <h4 class="mhdng">My markets</h4>
+                <div class="bdrbtm"></div>
+                <div class="m1">
+                    <div class="ce"></div>
+                    <h5 class="tce">Consumer Electronics</h5>
+                    <div class="msign"></div>
+                </div>
+                <div class="m2">
+                    <div class="ce2"></div>
+                    <h5 class="tce">Apparel</h5>
+                    <div class="msign"></div>
+                </div>
+                <div class="m2">
+                    <div class="ce3"></div>
+                    <h5 class="tce">Vehicle Parts & Accessories</h5>
+                    <div class="msign"></div>
+                </div>
+                <div class="m2">
+                    <div class="ce4"></div>
+                    <h5 class="tce">Sports & Entertainment</h5>
+                    <div class="msign"></div>
+                </div>
+                <div class="m2">
+                    <div class="ce5"></div>
+                    <h5 class="tce">Industrial machinery</h5>
+                    <div class="msign"></div>
+                </div>
+                <div class="m2">
+                    <div class="ce6"></div>
+                    <h5 class="tce">Home & Garden</h5>
+                    <div class="msign"></div>
+                </div>
+                <div class="m2">
+                    <div class="ce7"></div>
+                    <h5 class="tce">Beauty</h5>
+                    <div class="msign"></div>
+                </div>
+                <div class="m2">
+                    <div class="ce8"></div>
+                    <h5 class="tce">All Category</h5>
+                    <div class="msign"></div>
+                </div>
+            </div>
+            <div class="mainscroll">
+                <div class="sevenim">
+                    <div class="img1 one"></div>
+                    <div class="img1 two"></div>
+                    <div class="img1 three"></div>
+                    <div class="img1 four"></div>
+                    <div class="img1 five"></div>
+
+                </div>
+            </div>
+            <div class="benefits">
+                <h3 class="hb">Buyers Club Benefit</h3>
+                <div class="bn1">
+                    <div class="chn1">
+                        <h4 class="des">Us $ 10 off with a new <br> supplier</h4>
+                        <div class="orpicr"></div>
+                    </div>
+                </div>
+                <div class="bn1">
+                    <div class="chn1">
+                        <h4 class="des">RFQ: qoutes with<br> supplier preferences</h4>
+                        <div class="orpicr2"></div>
+                    </div>
+
+                </div>
+                <h4 class="hbp">Sign up to enjoy exciting Buyers Club benefits</h4>
+                <div class="btn1">Join for free</div>
+                <div class="btn2">Sign in</div>
+            </div>
+        </div>
+        <div class="scndfloor">
+            <div class="scndprnt">
+                <div class="marchexpo">
+                    <h2 class="expohdng">March Expo 2023</h2>
+                    <h4 class="trends">Source 2023's latest product trends</h4>
+                    <button class="btn3">See what's new</button>
+                </div>
+                <div class="deals">
+                    <div class="deal1">
+                       <div class="chd">
+                            <h5 class="lwstp">Lowest prices in 90 days</h5>
+                            <h5 class="save">Save with low prices and On-ti...</h5>
+                            <div class="imdiv">
+                                <img class="laptop" src="./images/images1 (1).jpg" alt="">
+                            </div>
+                       </div>
+                    </div>
+                    <div class="deal1">
+                        <div class="chd">
+                            <h5 class="lwstp">2023 Beauty Online Trad...</h5>
+                            <h5 class="save">Find this year's hottest styles</h5>
+                            <div class="imdiv">
+                                <img class="laptop" src="./images/images1 (2).jpg" alt="">
+                            </div>
+                       </div>
+                    </div>
+                    <div class="deal1">
+                        <div class="chd">
+                            <h5 class="lwstp">Featured suppliers</h5>
+                            <h5 class="save">with the highest sales volumes</h5>
+                            <div class="imdiv">
+                                <img class="laptop" src="./images/images1.jpg" alt="">
+                            </div>
+                       </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="thirdfloor">
+            <div class="sixwhited">
+                <div class="child">
+                    <h4 class="NA">New arrivals</h4>
+                    <div class="graych">
+                        <div class="pc1">
+                            <div class="arr1"></div>
+                        </div>
+                        <h5 class="dlr">US$0.99</h5>
+                        <h5 class="qntty">10.0 pieces</h5>
+                    </div>
+                    <div class="graych">
+                        <div class="pc1">
+                            <div class="arr2"></div>
+                        </div>
+                        <h5 class="dlr">US$1.48</h5>
+                        <h5 class="qntty">1 piece</h5>
+                    </div>
+                    <div class="graych">
+                        <div class="pc1">
+                            <div class="arr3"></div>
+                        </div>
+                        <h5 class="dlr">US$1.04</h5>
+                        <h5 class="qntty">2 piece</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="sixwhited">
+                <div class="child">
+                    <h4 class="NA">Top ranking</h4>
+                    <div class="graych">
+                        <div class="pc1">
+                            <div class="arr4"></div>
+                        </div>
+                        <h5 class="dlr">US$2.50</h5>
+                        <h5 class="qntty">40 pieces</h5>
+                    </div>
+                    <div class="graych">
+                        <div class="pc1">
+                            <div class="arr5"></div>
+                        </div>
+                        <h5 class="dlr">US$0.02</h5>
+                        <h5 class="qntty">100 piece</h5>
+                    </div>
+                    <div class="graych">
+                        <div class="pc1">
+                            <div class="arr6"></div>
+                        </div>
+                        <h5 class="dlr">US$19.80</h5>
+                        <h5 class="qntty">1 piece</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="sixwhited">
+                <div class="child">
+                    <h4 class="NA">Weekly deals</h4>
+                    <div class="graych">
+                        <div class="pc1">
+                            <div class="arr7"></div>
+                        </div>
+                        <h5 class="dlr">US$2.14</h5>
+                        <h5 class="discount">-14%</h5>
+                    </div>
+                    <div class="graych">
+                        <div class="pc1">
+                            <div class="arr8"></div>
+                        </div>
+                        <h5 class="dlr">US$1.48</h5>
+                        <h5 class="discount">-10%</h5>
+                    </div>
+                    <div class="graych">
+                        <div class="pc1">
+                            <div class="arr9"></div>
+                        </div>
+                        <h5 class="dlr">US$1.04</h5>
+                        <h5 class="discount">-54%</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="sixwhited">
+                <div class="child">
+                    <h4 class="NA">Dropshipping</h4>
+                    <div class="graych">
+                        <div class="pc1">
+                            <div class="arr10"></div>
+                        </div>
+                        <h5 class="dlr">US$0.86</h5>
+                        <h5 class="qntty">1 pieces</h5>
+                    </div>
+                    <div class="graych">
+                        <div class="pc1">
+                            <div class="arr11"></div>
+                        </div>
+                        <h5 class="dlr">US$159.00</h5>
+                        <h5 class="qntty">1 set</h5>
+                    </div>
+                    <div class="graych">
+                        <div class="pc1">
+                            <div class="arr12"></div>
+                        </div>
+                        <h5 class="dlr">US$1.95</h5>
+                        <h5 class="qntty">2 pieces</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="sixwhited">
+                <div class="child">
+                    <h4 class="NA">Regional specialties</h4>
+                    <div class="graych">
+                        <div class="pc1">
+                            <div class="arr13"></div>
+                        </div>
+                        <h5 class="dlr">US$0.04</h5>
+                        <h5 class="qntty">12 pieces</h5>
+                    </div>
+                    <div class="graych">
+                        <div class="pc1">
+                            <div class="arr14"></div>
+                        </div>
+                        <h5 class="dlr">US$1.20</h5>
+                        <h5 class="qntty">10 pieces</h5>
+                    </div>
+                    <div class="graych">
+                        <div class="pc1">
+                            <div class="arr15"></div>
+                        </div>
+                        <h5 class="dlr">US$3.50</h5>
+                        <h5 class="qntty">10 pieces</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="sixwhited">
+                <div class="child">
+                    <h4 class="NA">Tips</h4>
+                    <div class="graych">
+                        <div class="pc1">
+                            <div class="arr16"></div>
+                        </div>
+                        <h5 class="dlr">US$0.05</h5>
+                    </div>
+                    <div class="graych">
+                        <div class="pc1">
+                            <div class="arr17"></div>
+                        </div>
+                        <h5 class="dlr">US$0.01</h5>
+                    </div>
+                    <div class="graych">
+                        <div class="pc1">
+                            <div class="arr18"></div>
+                        </div>
+                        <h5 class="dlr">US$1.29</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="forthfloor">
+            <div class="ppe">
+                <h2 class="equipment">Personal Protective Equipment</h2>
+                <div class="eqdiv">
+                    <div class="pro">
+                        <div class="bpm"></div>
+                        <button class="btn4">View more</button>
+                    </div>
+                    <div class="pro">
+                        <div class="pen"></div>
+                        <h4 class="dlr">US$13.90</h4>
+                        <h4 class="qntty">300.0 pieces</h4>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="ppe">
+                <h2 class="live">LIVE</h2>
+                <div class="graydiv"></div>
+                <div class="eqdiv">
+                    <div class="pro">
+                        <div class="bpm hldr"></div>
+                        <button class="btn4">View more</button>
+                    </div>
+                    <div class="pro">
+                        <div class="pen box"></div>
+                        <h4 class="dlr">US$0.80</h4>
+                        <h4 class="qntty">300.0 pieces</h4>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="ppe">
+                <h2 class="live">Sample Center</h2>
+                <div class="graydiv2"></div>
+                <div class="eqdiv">
+                    <div class="pro">
+                        <div class="bpm case"></div>
+                        <button class="btn4">View more</button>
+                    </div>
+                    <div class="pro">
+                        <div class="pen shoes"></div>
+                        <h4 class="dlr">US$0.62</h4>
+                        <h4 class="qntty">10 pieces</h4>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="foryou">
+            <h2 class="FYP">Just for you</h2>
+            <div class="prnt5">
+                <div class="productdiv">
+                    <div class="pd1"></div>
+                    <h4 class="pddes">Fat Women Panties Solid Color Cotton Boxers lest Handsom...</h4>
+                    <h4 class="dlr2 ">US$2.98</h4>
+                    <h5 class="pddes">MOQ: 10 bags</h5>
+                </div>
+                <div class="productdiv">
+                    <div class="pd2"></div>
+                    <h4 class="pddes">2021 winter Korean fashion hooded thick cotton jacket...</h4>
+                    <h4 class="dlr2 ">US$19.54 - US$21.50</h4>
+                    <h5 class="pddes">MOQ: 1.0 piece</h5>
+                </div>
+                <div class="productdiv">
+                    <div class="pd3"></div>
+                    <h4 class="pddes">Custom New Design Men Winter Jacket For Sale</h4>
+                    <h4 class="dlr2 ">US$20.00 - US$22.00</h4>
+                    <h5 class="pddes">MOQ: 25.0 pieces</h5>
+                </div>
+                <div class="productdiv">
+                    <div class="pd4"></div>
+                    <h4 class="pddes">European style unique texture natural material traveling mi...</h4>
+                    <h4 class="dlr2 ">US$11.00 - US$45.00</h4>
+                    <h5 class="pddes">MOQ: 1.0 pack</h5>
+                </div>
+                <div class="productdiv">
+                    <div class="pd5"></div>
+                    <h4 class="pddes">French Fry Potato Chip Cutter Stainless Steel Vegetable Fruit...</h4>
+                    <h4 class="dlr2 ">US$0.66 - US$1.65</h4>
+                    <h5 class="pddes">MOQ: 100.0 bags</h5>
+                </div>
+                <div class="productdiv">
+                    <div class="pd6"></div>
+                    <h4 class="pddes">Seamless underwear thin small chest breathable anti-...</h4>
+                    <h4 class="dlr2 ">US$6.48 - US$7.08</h4>
+                    <h5 class="pddes">MOQ: 2 pieces</h5>
+                </div>
+                <div class="productdiv">
+                    <div class="pd7"></div>
+                    <h4 class="pddes">DL-1315 Professional Electric Personal Grooming...</h4>
+                    <h4 class="dlr2 ">US$3.90 - US$10.70</h4>
+                    <h5 class="pddes">MOQ: 5 pieces</h5>
+                </div>
+                <div class="productdiv">
+                    <div class="pd8"></div>
+                    <h4 class="pddes">kitchen zinc alloy mirror polishing Heavy-duty Garlic...</h4>
+                    <h4 class="dlr2 ">US$3.00 - US$3.70</h4>
+                    <h5 class="pddes">MOQ: 20 pieces</h5>
+                </div>
+                <div class="productdiv">
+                    <div class="pd9"></div>
+                    <h4 class="pddes">SUPERWOOD 4 Panel Glazed Shaker Oak Door - Internal...</h4>
+                    <h4 class="dlr2 ">US$180.00</h4>
+                    <h5 class="pddes">MOQ: 100 sets</h5>
+                </div>
+                <div class="productdiv">
+                    <div class="pd10"></div>
+                    <h4 class="pddes">MATERIKA 29979 WALLPAPER</h4>
+                    <h4 class="dlr2 ">US$38.44</h4>
+                    <h5 class="pddes">MOQ: 1 roll</h5>
+                </div>
+                <div class="productdiv">
+                    <div class="pd11"></div>
+                    <h4 class="pddes">Fashion Design Outdoor Matures Lady Feather Duck...</h4>
+                    <h4 class="dlr2 ">US$12.00 - US$18.00</h4>
+                    <h5 class="pddes">MOQ: 1000.0 pieces</h5>
+                </div>
+                <div class="productdiv">
+                    <div class="pd12"></div>
+                    <h4 class="pddes">wholesale DIY Oil Painting Paint by Number Kit beauty...</h4>
+                    <h4 class="dlr2 ">US$8.00 - US$69.00</h4>
+                    <h5 class="pddes">MOQ: 2 pieces</h5>
+                </div>
+                <div class="productdiv">
+                    <div class="pd13"></div>
+                    <h4 class="pddes">Professional Men's Grooming Set Barber Haircut Machine...</h4>
+                    <h4 class="dlr2 ">US$7.52 - US$8.07</h4>
+                    <h5 class="pddes">MOQ: 40 pieces</h5>
+                </div>
+                <div class="productdiv">
+                    <div class="pd14"></div>
+                    <h4 class="pddes">Popular Casual Fashion Wedge Sneakers Shoes Elastic Band...</h4>
+                    <h4 class="dlr2 ">US$4.90</h4>
+                    <h5 class="pddes">MOQ: 1 piece</h5>
+                </div>
+                <div class="productdiv">
+                    <div class="pd15"></div>
+                    <h4 class="pddes">Professional Cordless Hair Trimmer Rechargeable T-Bla...</h4>
+                    <h4 class="dlr2 ">US$16.94 - US$20.85</h4>
+                    <h5 class="pddes">MOQ: 1 piece</h5>
+                </div>
+                <div class="productdiv">
+                    <div class="pd16"></div>
+                    <h4 class="pddes">Chinese landscape digital oil painting Oil Painting gifts an...</h4>
+                    <h4 class="dlr2 ">US$1.00 - US$15.00</h4>
+                    <h5 class="pddes">MOQ: 1.0 piece</h5>
+                </div>
+                <div class="productdiv">
+                    <div class="pd17"></div>
+                    <h4 class="pddes">Fast Feed Cordless Hair Cutting Machine LED Display...</h4>
+                    <h4 class="dlr2 ">US$12.00 - US$13.00</h4>
+                    <h5 class="pddes">MOQ: 4000 pieces</h5>
+                </div>
+                <div class="productdiv">
+                    <div class="pd18"></div>
+                    <h4 class="pddes">Party Wedding Festival Wear Kurta Kurti Women Collectio...</h4>
+                    <h4 class="dlr2 ">US$8.46 - US$10.88</h4>
+                    <h5 class="pddes">MOQ: 25.0 pieces</h5>
+                </div>
+                <div class="productdiv">
+                    <div class="pd19"></div>
+                    <h4 class="pddes">Handmade Floral Printed Kimono Robe For Women...</h4>
+                    <h4 class="dlr2 ">US$10.00 - US$20.00</h4>
+                    <h5 class="pddes">MOQ: 50.0 pieces</h5>
+                </div>
+                <div class="productdiv">
+                    <div class="pd20"></div>
+                    <h4 class="pddes">Traditional South East Asia Silk Women Sarong</h4>
+                    <h4 class="dlr2 ">US$40.00 - US$100.00</h4>
+                    <h5 class="pddes">MOQ: 50.0 pieces</h5>
+                </div>
+                <div class="productdiv">
+                    <div class="pd21"></div>
+                    <h4 class="pddes">Exclusive Sale on Beautiful Design and Texture Antique...</h4>
+                    <h4 class="dlr2 ">US$600.00 - US$700.00</h4>
+                    <h5 class="pddes">MOQ: 2.0 pieces</h5>
+                </div>
+                <div class="productdiv">
+                    <div class="pd22"></div>
+                    <h4 class="pddes">Leather Jackets New Style in Garments Made with Pure...</h4>
+                    <h4 class="dlr2 ">US$27.00 - US$32.00</h4>
+                    <h5 class="pddes">MOQ: 5 pieces</h5>
+                </div>
+                <div class="productdiv">
+                    <div class="pd23"></div>
+                    <h4 class="pddes">Cross-border hair clipper wholesale all-metal...</h4>
+                    <h4 class="dlr2 ">US$10.37 - US$12.68</h4>
+                    <h5 class="pddes">MOQ: 1 piece</h5>
+                </div>
+                <div class="productdiv">
+                    <div class="pd24"></div>
+                    <h4 class="pddes">High Quality chinese shemale plus size women's underwear</h4>
+                    <h4 class="dlr2 ">US$0.90</h4>
+                    <h5 class="pddes">MOQ: 300 pieces</h5>
+                </div>
+                <div class="productdiv">
+                    <div class="pd25"></div>
+                    <h4 class="pddes">NorthForest 20OZ Water Bottle Skinny Tumbler Coffee...</h4>
+                    <h4 class="dlr2 ">US$4.58 - US$4.88</h4>
+                    <h5 class="pddes">MOQ: 30 pieces</h5>
+                </div>
+                <div class="productdiv">
+                    <div class="pd26"></div>
+                    <h4 class="pddes">Men's sports windbreaker MDE-258 OEM Service Big...</h4>
+                    <h4 class="dlr2 ">US$16.00 - US$24.00</h4>
+                    <h5 class="pddes">MOQ: 1000.0 pieces</h5>
+                </div>
+                <div class="productdiv">
+                    <div class="pd27"></div>
+                    <h4 class="pddes">2023 New Launching Our New Designer Catlouge Saree Wit...</h4>
+                    <h4 class="dlr2 ">US$31.00 - US$35.00</h4>
+                    <h5 class="pddes">MOQ: 10 pieces</h5>
+                </div>
+                <div class="productdiv">
+                    <div class="pd28"></div>
+                    <h4 class="pddes">Wholesale Clothing Custom Mens Waterproof Casual Plai...</h4>
+                    <h4 class="dlr2 ">US$33.00 - US$62.00</h4>
+                    <h5 class="pddes">MOQ: 100 pieces</h5>
+                </div>
+                <div class="productdiv">
+                    <div class="pd29"></div>
+                    <h4 class="pddes">Ribbed Melange Wide Strap Bra and Thong Set Ladies...</h4>
+                    <h4 class="dlr2 ">US$4.40 - US$4.50</h4>
+                    <h5 class="pddes">MOQ: 4000 pieces</h5>
+                </div>
+                <div class="productdiv">
+                    <div class="pd30"></div>
+                    <h4 class="pddes">High Grade Materials and Easy to Clean L14 W3cm White...</h4>
+                    <h4 class="dlr2 ">US$1.05</h4>
+                    <h5 class="pddes">MOQ: 120 packs</h5>
+                </div>
+                <div class="productdiv">
+                    <div class="pd31"></div>
+                    <h4 class="pddes">Bugatti 9.0 Electric Lightweight And Foldable Scooter (Agile...</h4>
+                    <h4 class="dlr2 ">US$999.99 - US$1,199.99</h4>
+                    <h5 class="pddes">MOQ: 2 boxes</h5>
+                </div>
+                <div class="productdiv">
+                    <div class="pd32"></div>
+                    <h4 class="pddes">Lavender Zari Weaving Kanjivaram Silk Saree Trendi...</h4>
+                    <h4 class="dlr2 ">US$35.96 - US$38.96</h4>
+                    <h5 class="pddes">MOQ: 5 pieces</h5>
+                </div>
+                <div class="productdiv">
+                    <div class="pd33"></div>
+                    <h4 class="pddes">Wholesale High Quality Custom Puffer Jacket Men's...</h4>
+                    <h4 class="dlr2 ">US$12.99 - US$17.99</h4>
+                    <h5 class="pddes">MOQ: 1 pieces</h5>
+                </div>
+                <div class="productdiv">
+                    <div class="pd34"></div>
+                    <h4 class="pddes">Silk Blend Cotton Embroidered Straight Magenta Kurta For...</h4>
+                    <h4 class="dlr2 ">US$6.00 - US$7.00</h4>
+                    <h5 class="pddes">MOQ: 10 pieces</h5>
+                </div>
+                <div class="productdiv">
+                    <div class="pd35"></div>
+                    <h4 class="pddes">Factory Sale Custom design and logo Padded Bras hot...</h4>
+                    <h4 class="dlr2 ">US$4.00 - US$6.00</h4>
+                    <h5 class="pddes">MOQ: 10 sets</h5>
+                </div>
+                <div class="productdiv">
+                    <div class="pd36"></div>
+                    <h4 class="pddes">GB-9518U popular rechargeable lithium LCD...</h4>
+                    <h4 class="dlr2 ">US$12.00 - US$12.70</h4>
+                    <h5 class="pddes">MOQ: 500 pieces</h5>
+                </div>
+                <div class="productdiv">
+                    <div class="pd37"></div>
+                    <h4 class="pddes">Custom Hoodie</h4>
+                    <h4 class="dlr2 ">US$25.00</h4>
+                    <h5 class="pddes">MOQ: 100 pieces</h5>
+                </div>
+                <div class="productdiv">
+                    <div class="pd38"></div>
+                    <h4 class="pddes">Material Ambush Cotton And Embroidery Best Quality...</h4>
+                    <h4 class="dlr2 ">US$24.00 - US$31.00</h4>
+                    <h5 class="pddes">MOQ: 1 piece</h5>
+                </div>
+                <div class="productdiv">
+                    <div class="pd39"></div>
+                    <h4 class="pddes">TAMY cape raincoat techwear</h4>
+                    <h4 class="dlr2 ">US$54.60</h4>
+                    <h5 class="pddes">MOQ: 50.0 bags</h5>
+                </div>
+                <div class="productdiv">
+                    <div class="pd40"></div>
+                    <h4 class="pddes">Made in Italy Top Quality Single-breasted coat for Men...</h4>
+                    <h4 class="dlr2 ">US$89.90</h4>
+                    <h5 class="pddes">MOQ: 2 pieces</h5>
+                </div>
+            </div>
+        </div>
+        <div class="fifthfloor">
+            <div class="trade">
+                <h2 class="service">Trade services</h2>
+                <h4 class="serhelp">Alibaba.com's trade services help ensure that your purchases are protected.</h4>
+            </div>
+            <div class="main5">
+                <div class="servdiv">
+                    <div class="assurance"></div>
+                    <h4 class="dlr2">Trade Assurance</h4>
+                    <h5 class="pddes">ORDER PROTECTION</h5>
+                </div>
+                <div class="servdiv">
+                    <div class="assurance2"></div>
+                    <h4 class="dlr2">Payment</h4>
+                    <h5 class="pddes">PAYMENT SOLUTION</h5>
+                </div>
+                <div class="servdiv">
+                    <div class="assurance3"></div>
+                    <h4 class="dlr2">Inspection</h4>
+                    <h5 class="pddes">INSPECTION SOLUTION</h5>
+                </div>
+                <div class="servdiv">
+                    <div class="assurance4"></div>
+                    <h4 class="dlr2">Ocean & air shipping</h4>
+                    <h5 class="pddes">LOGISTIC SERVICES</h5>
+                </div>
+            </div>
+            <div class="trade">
+                <h2 class="sply">Suppliers by country or region</h2>
+            </div>
+            <div class="flagdiv">
+                <div class="cntry1"></div>
+                <h4 class="c1">Japan</h4>
+                <div class="cntry2"></div>
+                <h4 class="c1">USA</h4>
+                <div class="cntry3"></div>
+                <h4 class="c1">Italy</h4>
+                <div class="cntry4"></div>
+                <h4 class="c1">Turkey</h4>
+                <div class="cntry5"></div>
+                <h4 class="c1">Malaysia</h4>
+                <div class="cntry6"></div>
+                <h4 class="c1">South Korea</h4>
+                <div class="cntry7"></div>
+                <h4 class="c1">vietnam</h4>
+                <div class="cntry8"></div>
+                <h4 class="c1">Russia</h4>
+                <div class="cntry9"></div>
+                <h4 class="c1">Thailand</h4>
+                <h4 class="c2">More</h4>
+
+            </div>
+        </div>
+        <div class="expo2"></div>
+    </div> 
+</body>
+
+</html>
