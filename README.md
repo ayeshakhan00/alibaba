@@ -1,2 +1,2 @@
 # alibaba
-Its a selling website
+Its for selling purpose
